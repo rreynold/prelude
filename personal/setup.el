@@ -24,29 +24,7 @@
   ;; Set the starting position to the upper left corner.
   (set-frame-position (selected-frame) 0 25)
 
- ;; (require 'ergoemacs-mode)
- ;; (ergoemacs-ignore-prev-global) ; Do not honor previously defined
- ;;                                ; global keys.
-  ;;(setq ergoemacs-theme nil) ;; Uses Standard Ergoemacs keyboard theme
-  ;;(setq ergoemacs-keyboard-layout "us") ;; Assumes QWERTY keyboard layout
-  ;;(ergoemacs-mode 1)
-
-  ;; TODO: Figure out how to remap ctrl+z to undo. Currently mapped to alt-z in ergoemacs.
-  (with-eval-after-load 'undo-tree (defun undo-tree-overridden-undo-bindings-p () nil))
-  ;;(global-unset-key "\C-z")
-  ;;(global-set-key "\C-z" 'advertised-undo)
-  ;;(define-key global-map "\M-z" 'undo)
-  ;;(define-key global-map "\M-y" 'redo)
-
-  ;(cua-mode t)
-  ;(setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
-  ;(transient-mark-mode 1) ;; No region when it is not highlighted
-  ;(setq cua-keep-region-after-copy t) ;; Standard Windows behaviour
-
-  ;; Using regular keybindings for search forward/back.
-  (define-key isearch-mode-map (kbd "<f3>") 'isearch-repeat-forward)
-  (define-key isearch-mode-map (kbd "S-<f3>") 'isearch-repeat-backward)
-
+ 
   ;;Add autosave when focus is lost (available in emacs 24.4 and later, see http://www.emacswiki.org/emacs/AutoSave#toc8)
   (defun save-all ()
     (interactive)
